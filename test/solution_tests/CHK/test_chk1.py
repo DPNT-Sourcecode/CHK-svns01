@@ -6,5 +6,7 @@ class TestChk():
         assert checkout_solution.checkout("AAABBBCD") == 240
         assert checkout_solution.checkout("") == 0
         assert checkout_solution.checkout('aa') == 100
+        assert checkout_solution.checkout("-") == -1
+
 
 

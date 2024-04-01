@@ -11,6 +11,8 @@ def checkout(skus):
         'D': 0
     }
     for char in skus_upper:
+        if not char in counts.keys():
+            return -1
         counts[char] += 1
 
     sum = 0
@@ -20,6 +22,7 @@ def checkout(skus):
     sum += counts['D'] * 15
 
     return sum 
+
 
 
 
