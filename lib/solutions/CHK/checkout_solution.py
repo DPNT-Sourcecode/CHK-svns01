@@ -20,4 +20,4 @@ def checkout(skus):
 
     return sum 
 
-checkout("AAABBBCD")
+
