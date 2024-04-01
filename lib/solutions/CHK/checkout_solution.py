@@ -38,7 +38,7 @@ def checkout(skus):
     sum += counts['I'] * 35
     sum += counts['J'] * 60
     
-    sum += double_price(counts['K'], 80, 2, 150)
+    sum += double_price(counts['K'], 70, 2, 120)
 
     sum += counts['L'] * 90
 
@@ -51,16 +51,16 @@ def checkout(skus):
     sum += double_price(counts['Q'], 30, 3, 80)
 
     sum += counts['R'] * 50
-    sum += counts['S'] * 30
+    sum += counts['S'] * 20
     sum += counts['T'] * 20
     sum += counts['U'] * 40
     
     sum += triple_price(counts['V'], 50, 2, 90, 3, 130)
 
     sum += counts['W'] * 20
-    sum += counts['X'] * 90
-    sum += counts['Y'] * 10
-    sum += counts['Z'] * 50
+    sum += counts['X'] * 17
+    sum += counts['Y'] * 20
+    sum += counts['Z'] * 21
 
     return sum 
 
@@ -76,3 +76,4 @@ def triple_price(count, base_price, volume1, price1, volume2, price2):
     count = count % volume1
     sum += count * base_price
     return sum
+
