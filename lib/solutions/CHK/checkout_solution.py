@@ -9,22 +9,17 @@ def checkout(skus):
         'C': 0,
         'D': 0,
         'E': 0,
+        'F': 0
     }
     for char in skus:
         if not char in counts.keys():
             return -1
         counts[char] += 1
 
-    free_items = {
-        'A': 0,
-        'B': 0,
-        'C': 0,
-        'D': 0,
-        'E': 0,
-    }
-
     # For now, will always be cheaper to deduct the free item
     counts['B'] = max(counts['B'] - counts['E'] // 2, 0)
+
+    counts['F'] = max(counts['F'] - counts['F'] // 3, 0)
 
     sum = 0
 
@@ -38,6 +33,7 @@ def checkout(skus):
     sum += counts['C'] * 20
     sum += counts['D'] * 15
     sum += counts['E'] * 40
+    sum += counts['F'] * 10
 
     return sum 
 
