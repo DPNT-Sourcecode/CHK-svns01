@@ -10,5 +10,3 @@ class TestChk():
 
         assert checkout_solution.checkout("AAAAAAAAABEE") == 460 # 9A, 2E (B is free)=> 200+130+50+80
         assert checkout_solution.checkout("EE") == 80
-
-
