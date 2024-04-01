@@ -28,7 +28,7 @@ def checkout(skus):
 
     sum = 0
 
-    sum += (counts['A'] // 5) * 500
+    sum += (counts['A'] // 5) * 200
     counts['A'] = counts['A'] % 5
     sum += (counts['A'] // 3) * 130
     counts['A'] = counts['A'] % 3
@@ -37,9 +37,8 @@ def checkout(skus):
     sum += (counts['B'] // 2) * 45 + (counts['B'] % 2) * 30
     sum += counts['C'] * 20
     sum += counts['D'] * 15
+    sum += counts['E'] * 40
 
     return sum 
-
-checkout("AAAAAAAAABEE")
 
 
