@@ -24,7 +24,7 @@ def checkout(skus):
     }
 
     # For now, will always be cheaper to deduct the free item
-    counts['B'] -= max(counts['E'] // 2, 0)
+    counts['B'] = max(counts['B'] - counts['E'] // 2, 0)
 
     sum = 0
 
@@ -42,5 +42,6 @@ def checkout(skus):
     return sum 
 
 checkout("EE")
+
 
 
