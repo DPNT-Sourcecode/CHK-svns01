@@ -3,13 +3,14 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    skus_upper = skus.upper()
     counts = {
         'A': 0,
         'B': 0,
         'C': 0,
         'D': 0
     }
-    for char in skus:
+    for char in skus_upper:
         counts[char] += 1
 
     sum = 0
@@ -19,5 +20,6 @@ def checkout(skus):
     sum += counts['D'] * 15
 
     return sum 
+
 
 
