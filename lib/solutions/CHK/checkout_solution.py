@@ -21,7 +21,22 @@ def checkout(skus):
 
     counts['U'] = max(counts['U'] - counts['U'] // 4, 0)
 
+
     sum = 0
+    # Handle group deal
+    while counts['S'] + counts['T'] + counts['X'] + counts['Y'] + counts['Z'] >= 3:
+        cnt = 0
+        for k in ['Z', 'S', 'T', 'Y', 'X']: # Most expensive items first
+            while counts[k] > 0:
+                counts[k] -= 1
+                cnt += 1
+                if cnt == 3:
+                    break
+            if cnt == 3:
+                sum += 45
+                break
+                  
+
 
     sum += triple_price(counts['A'], 50, 3, 130, 5, 200)
 

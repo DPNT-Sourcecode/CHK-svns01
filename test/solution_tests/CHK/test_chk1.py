@@ -14,3 +14,4 @@ class TestChk():
         assert checkout_solution.checkout("FFF") == 20
         assert checkout_solution.checkout("FFFF") == 30
         assert checkout_solution.checkout("AFF") == 70
+        assert checkout_solution.checkout("ZZXZ") == 62 # 45 + 1X (17)
