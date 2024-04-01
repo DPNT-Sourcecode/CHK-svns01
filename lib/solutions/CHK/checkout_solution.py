@@ -41,4 +41,6 @@ def checkout(skus):
 
     return sum 
 
+checkout("EE")
+
 
